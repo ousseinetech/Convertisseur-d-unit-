@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="contain">
+    <h1 class="title">Convertisseur d'unité</h1>
+
+    <form action="" method="post">
+        <label>
+            <select name="categories" id="categories">
+                <option value="null">-- Choisir une conversion --</option>
+                <option value="kilogramlivre">Kilogramme en Livre</option>
+                <option value="metreyards">Mètre en Yards</option>
+                <option value="celsusfahrenheit">Celsus en Fahrenheit</option>
+            </select>
+        </label>
+        <label>
+            <input type="number" name="value" id="value" class="form-control" placeholder="Entre une valeur..."
+                   value="{% if value %} {{ value }}{% endif %}">
+        </label>
+        <button class="btn btn-lg btn-primary">Convertir</button>
+    </form>
+
+    <div class="card">
+        {% if value %}
+            <h4 class="title"> {{ value }} kg = {{ valueConver }} Livres</h4>
+        {% else %}
+            <h4 class="title">Resultat de la conversion</h4>
+        {% endif %}
+    </div>
+
+    <div class="info">
+        <h2 class="title">Proriètés</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Unité</th>
+                <th>Kilogramme</th>
+                <th>Livre</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2.20462</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Unité</th>
+                <th>Mètre</th>
+                <th>Yards</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>1.09361</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Unité</th>
+                <th>Célsus</th>
+                <th>Fahrenheit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>33.8</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

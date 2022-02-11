@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font: 18px/1.5 sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5rem;
+}
+
+.contain {
+    width: 50%;
+    margin: 5rem auto;
+}
+
+form {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+form select {
+    width: 675px;
+    padding: 15px;
+    text-align: center;
+}
+
+form input {
+    margin: 3rem 0;
+}
+
+.card {
+    position: relative;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.card .title {
+    margin: 0;
+}
+
+.info {
+    margin-top: 4rem;
+}
+
+.info .title {
+    margin-bottom: 2rem;
+}
+
+table th, td {text-align: center}
+
+table th:first-child, td:first-child {text-align: start}
+table th:last-child, td:last-child {text-align: end}
